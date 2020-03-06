@@ -1,0 +1,35 @@
+@font-face {
+  font-weight: normal;
+  font-family: "PT Mono";
+  font-style: normal;
+  src: url("../fonts/pt-mono-regular.woff2") format("woff2"), url("../fonts/pt-mono-regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: "Roboto-Condensed";
+  font-style: normal;
+  src: url("../fonts/roboto-condensed-regular.woff2") format("woff2"), url("../fonts/roboto-condensed-regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "Roboto-Condensed";
+  font-style: normal;
+  src: url("../fonts/roboto-condensed-bold.woff2") format("woff2"), url("../fonts/roboto-condensed-bold.woff") format("woff");
+  font-display: swap;
+}
+
+body {
+  min-width: $mobile-width;
+  max-width: $desktop-max-width;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
