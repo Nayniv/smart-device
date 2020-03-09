@@ -1,0 +1,80 @@
+.site-nav {
+  color: $white-text;
+  padding-bottom: 92px;
+}
+.site-nav__button {
+  display: block;
+  width: 407px;
+  height: 55px;
+  border-radius: 5px;
+  background-color: $bg-color-hover;
+  cursor: pointer;
+  text-decoration: none;
+  color: $white-text;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  @include bold-roboto;
+  margin-left: 18%;
+  box-sizing: border-box;
+  padding: 17px 28px 10px 28px;
+  margin-bottom: 93px;
+}
+
+.site-nav__scroll {
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 16px;
+  cursor: pointer;
+  color: $white-text;
+  @include text-ptmono;
+  opacity: 0.5;
+  display: inline-block;
+  width: 93px;
+  transform: rotate(-90deg);
+  margin-left: 11.17%;
+  margin-bottom: 40px;
+  margin-top: 37px;
+}
+
+@media (min-width: $mobile-width) and (max-width: $desktop-width) {
+  .site-nav__scroll {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .site-nav {
+    padding-bottom: 70px;
+  }
+
+  .site-nav__button {
+    width: 379px;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .site-nav {
+    padding-bottom: 70px;
+  }
+
+  .site-nav__button {
+    width: 89.7%;
+    margin: 0 auto;
+    position: relative;
+
+    &::after {
+      position: static;
+      content: "бесплатная консультация";
+      top: 31%;
+      left: 12%;
+    }
+
+  }
+
+  .site-nav__button span{
+    display: none;
+  }
+}

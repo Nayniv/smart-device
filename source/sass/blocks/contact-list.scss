@@ -4,3 +4,147 @@
     height: 52px;
   }
 }
+
+.contact-list {
+  list-style: none;
+  margin: 0;
+  margin-bottom: 228px;
+  padding-left: 13.177%;
+  padding-right: 13.333%;
+  padding-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-list__item--logo {
+  flex-grow: 1;
+  align-self: stretch;
+}
+
+.contact-list__link {
+  text-decoration: none;
+  @include text-ptmono;
+  font-size: 16px;
+  line-height: 18px;
+  color: $white-text;
+  cursor: pointer;
+}
+
+.contact-list__button {
+  @include bold-roboto;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: $white-text;
+  text-transform: uppercase;
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 8px 10px 8px 11px;
+  background: rgba(255, 255, 255, 0);
+  width: 180px;
+  height: 45px;
+}
+
+.contact-list__item--email {
+  padding-right: 122px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 15px;
+    left: -39px;
+    top: 0;
+    background: url("../img/icon-envelope.svg") 50% no-repeat;
+  }
+}
+
+.contact-list__item--phone {
+  padding-right: 50px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 18px;
+    left: -34px;
+    top: 0;
+    background: url("../img/icon-phone-call.svg") 50% no-repeat;
+  }
+}
+
+@media (min-width: $mobile-width) and (max-width: $desktop-width) {
+  .contact-list__link {
+    display: none;
+  }
+
+  .contact-list__item--callback {
+    display: none;
+  }
+
+  .contact-list__item--email {
+    &::before {
+      width: 26px;
+      height: 19px;
+      background-size: 100%;
+    }
+  }
+
+  .contact-list__item--phone {
+    &::before {
+      width: 23px;
+      height: 23px;
+      background-size: 100%;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .contact-list {
+    padding-top: 20px;
+    padding-left: 3.1%;
+    padding-right: 3%;
+    margin-bottom: 112px;
+  }
+
+  .contact-list__item--email {
+    &::before {
+      top: -13px;
+      left: 89px;
+    }
+  }
+
+  .contact-list__item--phone {
+    &::before {
+      top: -15px;
+      left: 27px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .contact-list {
+    padding-top: 17px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .contact-list__item--email {
+    &::before {
+      top: -13px;
+      left: 99px;
+    }
+  }
+
+  .contact-list__item--phone {
+    &::before {
+      top: -15px;
+      left: 28px;
+    }
+  }
+}

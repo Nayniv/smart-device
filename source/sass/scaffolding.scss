@@ -10,7 +10,7 @@
   font-weight: normal;
   font-family: "Roboto-Condensed";
   font-style: normal;
-  src: url("../fonts/roboto-condensed-regular.woff2") format("woff2"), url("../fonts/roboto-condensed-regular.woff") format("woff");
+  src: url("../fonts/roboto_condensed.woff2") format("woff2"), url("../fonts/roboto_condensed.woff") format("woff");
   font-display: swap;
 }
 
@@ -18,18 +18,53 @@
   font-weight: bold;
   font-family: "Roboto-Condensed";
   font-style: normal;
-  src: url("../fonts/roboto-condensed-bold.woff2") format("woff2"), url("../fonts/roboto-condensed-bold.woff") format("woff");
+  src: url("../fonts/roboto_condensed_bold.woff2") format("woff2"), url("../fonts/roboto_condensed_bold.woff") format("woff");
   font-display: swap;
 }
 
 body {
   min-width: $mobile-width;
   max-width: $desktop-max-width;
-  margin: 0;
+
+  margin: 0 auto;
   padding: 0;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+@mixin text-ptmono {
+  font-family: "PT Mono", "Courier New", monospace;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin bold-roboto {
+  font-family: "Roboto-Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+@mixin normal-roboto {
+  font-family: "Roboto-Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
